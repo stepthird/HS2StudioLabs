@@ -1,0 +1,7 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!-- Studio Bridge. Shared settings and game references: ../Directory.Build.props -->
+  <PropertyGroup>
+    <AssemblyName>HS2_StudioBridge</AssemblyName>
+    <RootNamespace>StudioBridgePlugin</RootNamespace>
+  </PropertyGroup>
+</Project>

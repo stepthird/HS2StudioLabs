@@ -1,0 +1,7 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!-- Chara to Item. Shared settings and game references: ../Directory.Build.props -->
+  <PropertyGroup>
+    <AssemblyName>HS2_CharaToItem</AssemblyName>
+    <RootNamespace>CharaToItemPlugin</RootNamespace>
+  </PropertyGroup>
+</Project>

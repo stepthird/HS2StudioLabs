@@ -1,0 +1,7 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!-- Toolbar Tweaks. Shared settings and game references: ../Directory.Build.props -->
+  <PropertyGroup>
+    <AssemblyName>HS2_ToolbarTweaks</AssemblyName>
+    <RootNamespace>ToolbarTweaksPlugin</RootNamespace>
+  </PropertyGroup>
+</Project>

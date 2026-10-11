@@ -1,0 +1,7 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!-- Motion Lab. Shared settings and game references: ../Directory.Build.props -->
+  <PropertyGroup>
+    <AssemblyName>HS2_MotionLab</AssemblyName>
+    <RootNamespace>MotionLabPlugin</RootNamespace>
+  </PropertyGroup>
+</Project>

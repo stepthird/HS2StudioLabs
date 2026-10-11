@@ -1,0 +1,40 @@
+<Project>
+  <!-- Shared by every plugin project. Build: dotnet build src/<Plugin> -c Release -p:GameDir="<game folder>" -->
+  <PropertyGroup>
+    <TargetFramework>net46</TargetFramework>
+    <LangVersion>7.2</LangVersion>
+    <OutputType>Library</OutputType>
+    <Optimize>true</Optimize>
+    <DebugType>none</DebugType>
+    <DebugSymbols>false</DebugSymbols>
+    <Deterministic>true</Deterministic>
+    <PathMap>$(MSBuildProjectDirectory)=.</PathMap>
+    <NoStdLib>true</NoStdLib>
+    <DisableImplicitFrameworkReferences>true</DisableImplicitFrameworkReferences>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <GenerateDocumentationFile>false</GenerateDocumentationFile>
+    <Nullable>disable</Nullable>
+    <NoWarn>CS0649;CS0169;CS0414;CS0219;CS0162;CS0168</NoWarn>
+    <AppendTargetFrameworkToOutputPath>true</AppendTargetFrameworkToOutputPath>
+    <Managed>$(GameDir)\StudioNEOV2_Data\Managed</Managed>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="$(Managed)\mscorlib.dll" Private="false" />
+    <Reference Include="$(Managed)\System.dll" Private="false" />
+    <Reference Include="$(Managed)\System.Core.dll" Private="false" />
+    <Reference Include="$(Managed)\System.Xml.dll" Private="false" />
+    <Reference Include="$(Managed)\Assembly-CSharp.dll" Private="false" />
+    <Reference Include="$(Managed)\Assembly-CSharp-firstpass.dll" Private="false" />
+    <Reference Include="$(Managed)\IL.dll" Private="false" />
+    <Reference Include="$(Managed)\UnityEngine*.dll" Private="false" />
+    <Reference Include="$(Managed)\Cinemachine.dll" Private="false" />
+    <Reference Include="$(Managed)\UniRx.dll" Private="false" />
+    <Reference Include="$(GameDir)\BepInEx\core\BepInEx.dll" Private="false" />
+    <Reference Include="$(GameDir)\BepInEx\core\0Harmony.dll" Private="false" />
+    <Reference Include="$(GameDir)\BepInEx\plugins\HS2API.dll" Private="false" />
+  </ItemGroup>
+  <Target Name="StudioLabsCheckGameDir" BeforeTargets="ResolveAssemblyReferences"
+          Condition="!Exists('$(GameDir)\StudioNEOV2.exe')">
+    <Error Text="Set GameDir to the HoneySelect 2 folder (the one with StudioNEOV2.exe): -p:GameDir=&quot;...&quot;" />
+  </Target>
+</Project>

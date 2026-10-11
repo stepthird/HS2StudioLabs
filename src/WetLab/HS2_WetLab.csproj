@@ -1,0 +1,7 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!-- Wet Lab. Shared settings and game references: ../Directory.Build.props -->
+  <PropertyGroup>
+    <AssemblyName>HS2_WetLab</AssemblyName>
+    <RootNamespace>WetLabPlugin</RootNamespace>
+  </PropertyGroup>
+</Project>

@@ -1,0 +1,7 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!-- Ragdoll Lab. Shared settings and game references: ../Directory.Build.props -->
+  <PropertyGroup>
+    <AssemblyName>HS2_RagdollLab</AssemblyName>
+    <RootNamespace>RagdollLabPlugin</RootNamespace>
+  </PropertyGroup>
+</Project>
